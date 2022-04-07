@@ -26,4 +26,11 @@ class BasicMenuGui(QMainWindow):
         self.create_dockwidget()
         
     
+    def create_menu(self):
+        """
+        Create menubar & menu actions.
+        """
+        # Create Actions for "File" menu:
+        
+    
         
