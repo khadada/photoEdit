@@ -70,6 +70,22 @@ class BasicMenuGui(QMainWindow):
         
         # Add Actions to toolbar
         tool_bar.addAction(self.exit_action)
+        
+    def create_dockwidget(self):
+        """
+        Create dock widget
+        """
+        # Setup dock widget:
+        dock_widget = QDockWidget()
+        dock_widget.setWindowTitle("Example Dock")
+        dock_widget.setAllowedAreas(Qt.AllDockWidgetAreas)
+        
+        # Set main widget for dok widget
+        dock_widget.setWidget(QTextEdit())
+        
+        # Set inital location of dock widget in main window
+        self.addDockWidget(Qt.LeftDockWidgetArea, dock_widget) 
+        
 # Run Program 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
