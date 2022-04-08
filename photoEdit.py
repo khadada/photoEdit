@@ -68,6 +68,8 @@ class BasicMenuGui(QMainWindow):
         tool_bar.setIconSize(QSize(20, 20))
         self.addToolBar(tool_bar)
         
+        # Add Actions to toolbar
+        tool_bar.addAction(self.exit_action)
 # Run Program 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
