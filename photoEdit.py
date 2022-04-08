@@ -32,10 +32,17 @@ class BasicMenuGui(QMainWindow):
         Create menubar & menu actions.
         """
         # Create Actions for "File" menu:
-        self.exit_action = QAction(Icon("icons/close.png"), "Exit",self)
+        self.exit_action = QAction(QIcon("icons/close.png"), "Exit",self)
         self.exit_action.setShortcut("Ctrl+Q")
         self.exit_action.setToolTip("Quit the program (T_T)")
         self.exit_action.triggered.connect(self.close)
+        
+        # Create Actions for "View" menu:
+        full_screen_action = QAction(QIcon("icons/fullscreen.png"),"Full screen", self)
+        full_screen_action.setCheckable(True)
+        full_screen_action.setToolTip("Switch to full screen mode")
+        full_screen_action.setShortcut("Ctrl+Shift+F")
+        full_screen_action.triggered.connect(self.switch_on_fullscreen)
         
         
         
