@@ -86,6 +86,14 @@ class BasicMenuGui(QMainWindow):
         # Set inital location of dock widget in main window
         self.addDockWidget(Qt.LeftDockWidgetArea, dock_widget) 
         
+    def switch_on_fullscreen(self,state):
+        """
+        If state is True, then Display the main window in full screen. otherwise return the window to normal.
+        """
+        if state:
+            self.showFullScreen()
+        else:
+            self.showNormal()
 # Run Program 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
