@@ -44,6 +44,12 @@ class BasicMenuGui(QMainWindow):
         full_screen_action.setShortcut("Ctrl+Shift+F")
         full_screen_action.triggered.connect(self.switch_on_fullscreen)
         
+        # Create menubar
+        menu_bar = self.menuBar()
+        menu_bar.setNativeMenuBar(False)
+        
+        
+        
         
         
     
