@@ -1,5 +1,4 @@
 # Importing necessary Module and classes
-from msilib.schema import Icon
 import sys
 from PyQt5.QtWidgets import (QApplication,QMainWindow,QStatusBar,QAction,QTextEdit,QToolBar,QDockWidget)
 from PyQt5.QtCore import Qt, QSize
@@ -52,7 +51,11 @@ class BasicMenuGui(QMainWindow):
         file_menu = menu_bar.addMenu("File")
         file_menu.addAction(self.exit_action)
         
-        
+# Run Program 
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = BasicMenuGui()
+    sys.exit(app.exec_())        
         
         
     
