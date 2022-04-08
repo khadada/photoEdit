@@ -56,6 +56,10 @@ class BasicMenuGui(QMainWindow):
         submenu_of_view = view_menu.addMenu("Appearance")
         submenu_of_view.addAction(full_screen_action)
         
+        # Display info about tools, menu, and view in the status bar:
+        self.setStatusBar(QStatusBar(self))
+    
+    
         
 # Run Program 
 if __name__ == "__main__":
