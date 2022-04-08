@@ -59,7 +59,14 @@ class BasicMenuGui(QMainWindow):
         # Display info about tools, menu, and view in the status bar:
         self.setStatusBar(QStatusBar(self))
     
-    
+    def create_toolbar(self):
+        """
+        Create toolbar for GUI 
+        """
+        # Setup toolbar
+        tool_bar = QToolBar("Main Toolbar")
+        tool_bar.setIconSize(QSize(20, 20))
+        self.addToolBar(tool_bar)
         
 # Run Program 
 if __name__ == "__main__":
