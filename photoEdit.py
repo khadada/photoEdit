@@ -1,4 +1,5 @@
 # Importing necessary Module and classes
+from msilib.schema import Icon
 import sys
 from PyQt5.QtWidgets import (QApplication,QMainWindow,QStatusBar,QAction,QTextEdit,QToolBar,QDockWidget)
 from PyQt5.QtCore import Qt, QSize
@@ -31,6 +32,12 @@ class BasicMenuGui(QMainWindow):
         Create menubar & menu actions.
         """
         # Create Actions for "File" menu:
+        self.exit_action = QAction(Icon("icons/close.png"), "Exit",self)
+        self.exit_action.setShortcut("Ctrl+Q")
+        self.exit_action.setToolTip("Quit the program (T_T)")
+        self.exit_action.triggered.connect(self.close)
+        
+        
         
     
         
