@@ -51,6 +51,12 @@ class BasicMenuGui(QMainWindow):
         file_menu = menu_bar.addMenu("File")
         file_menu.addAction(self.exit_action)
         
+        # Create View menu, Appearance submenu, and add actions:
+        view_menu = menu_bar.addMenu("View")
+        submenu_of_view = view_menu.addMenu("Appearance")
+        submenu_of_view.addAction(full_screen_action)
+        
+        
 # Run Program 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
